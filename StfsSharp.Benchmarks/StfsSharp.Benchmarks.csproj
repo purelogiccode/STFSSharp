@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <AssemblyName>StfsSharp.Benchmarks</AssemblyName>
+    <RootNamespace>StfsSharp.Benchmarks</RootNamespace>
+    <!-- The linked fixture builder groups its record with the builder. -->
+    <NoWarn>$(NoWarn);MA0015;MA0048;MA0051</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.8" />
+    <PackageReference Include="Meziantou.Analyzer" Version="3.0.321">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Analyzers" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StfsSharp\StfsSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\StfsSharp.Tests\Fixtures\SyntheticStfsPackage.cs" Link="Fixtures\SyntheticStfsPackage.cs" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+<Project>
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>PureLogicCode.com</Authors>
+    <Copyright>Copyright (c) PureLogicCode.com</Copyright>
+    <PackageProjectUrl>https://github.com/purelogiccode/STFSSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/purelogiccode/STFSSharp.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryBranch>master</RepositoryBranch>
+    <!-- Release tags are v-prefixed (v1.0.0); state it explicitly. -->
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <AssemblyName>StfsSharp.Fuzz</AssemblyName>
+    <RootNamespace>StfsSharp.Fuzz</RootNamespace>
+    <PublishAot>false</PublishAot>
+    <!-- Fixture builder and the mutation loop are intentionally compact. -->
+    <NoWarn>$(NoWarn);MA0015;MA0048;MA0051</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StfsSharp\StfsSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\StfsSharp.Tests\Fixtures\SyntheticStfsPackage.cs" Link="Fixtures\SyntheticStfsPackage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Meziantou.Analyzer" Version="3.0.321">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Roslynator.Analyzers" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
