@@ -61,3 +61,4 @@ The facades are scheduled for removal in XISOSharp 2.0.0.
   filesystem inside it.
 - The reader does not cache fragment handles across volumes; each `GodVolume`
   owns its open `FileStream` instances.
+- Some marketplace GOD stubs declare a logical length far beyond the stored `DataNNNN` bytes (for example, a 38 GB header with a 71 MB fragment). Reads past the stored data throw `InvalidDataException` with the fragment and sector; `decompress` reports the same truncation instead of writing a zero-filled image.
