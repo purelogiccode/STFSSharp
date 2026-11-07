@@ -68,9 +68,7 @@ int ExtractTo(
 `StfsProgress` carries `Type` (`DirectoryAdded`/`FileAdded`), `Path`, `Sector`
 and `Size`.
 
-### Title metadata
-
-### `StfsHeader`
+### Title metadata (`StfsHeader`)
 
 | Member | Description |
 |---|---|
