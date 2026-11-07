@@ -1,5 +1,7 @@
 # 1.0.0
 
+_Release date: 2026-11-07._
+
 Initial extraction of the XISOSharp GOD/STFS readers into a standalone package.
 
 - Read-only XBLA/XBLIG/Community Games STFS package support: file table,

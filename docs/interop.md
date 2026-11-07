@@ -20,7 +20,7 @@ No copyrighted game data is stored in the repository.
 
 Optional tests validate retail packages when `STFSSHARP_REAL_CORPUS=1` is set.
 They extract one archive per family into a temp directory, then exercise the
-readers. The 2026-11-06 run used:
+readers. The 2026-11-07 run used:
 
 | Family | Archive | Result |
 |---|---|---|
